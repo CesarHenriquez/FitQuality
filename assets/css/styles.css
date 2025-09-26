@@ -1,0 +1,239 @@
+/* =========================================================
+   VARIABLES DE COLOR Y RESET
+========================================================= */
+:root {
+  --bg: #0f172a;          /* azul muy oscuro (fondo) */
+  --surface: #111827;     /* gris carbón (header/footer) */
+  --primary: #22c55e;     /* verde acento */
+  --primary-700: #16a34a;
+  --text: #e5e7eb;        /* gris claro texto */
+  --muted: #94a3b8;       /* gris medio */
+  --card: #1f2937;        /* gris pizarra (cards/forms) */
+  --border: #334155;      /* gris borde */
+  --radius: 16px;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+a { color: var(--text); text-decoration: none; }
+a:hover { color: var(--primary); }
+img { max-width: 100%; display: block; border-radius: 12px; }
+
+/* =========================================================
+   LAYOUT
+========================================================= */
+.container { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+.page-title { text-align: center; margin-bottom: 16px; }
+.muted { color: var(--muted); }
+.page-wrap { padding: 40px 0; }
+.page-narrow { max-width: 640px; margin: 0 auto; }
+
+/* =========================================================
+   HEADER / NAV
+========================================================= */
+.header { background: var(--surface); border-bottom: 1px solid var(--border); }
+.header__content { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; }
+
+/* Logo con imagen PNG oficial */
+.logo { display:inline-flex; align-items:center; }
+.logo img {
+  height: 50px;        /* tamaño del logo en escritorio */
+  width: auto;
+  display: block;
+  border-radius: 0;    /* sin bordes redondeados en el logo */
+}
+@media (max-width: 480px){
+  .logo img { height: 40px; }  /* más chico en pantallas móviles */
+}
+
+.nav a { margin-left: 16px; opacity: .9; }
+.nav a:hover { opacity: 1; }
+
+/* Badge del carrito */
+.badge{
+  display:inline-flex; align-items:center; justify-content:center;
+  min-width:24px; height:24px; padding:0 6px;
+  border-radius:999px; background: var(--primary); color:#001b0b;
+  font-size:12px; font-weight:800; margin-left:10px;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+.hero { padding: 64px 0; background: linear-gradient(180deg, #111827, #0b1226); }
+.hero h1 { font-size: clamp(28px, 4vw, 40px); margin: 0 0 8px; }
+.hero p { color: var(--muted); margin: 0 0 16px; }
+
+/* =========================================================
+   GRID / CARDS
+========================================================= */
+.grid { padding: 40px 0; }
+.grid h2 { margin: 0 0 16px; }
+
+.cards{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap:16px;
+}
+
+.card{
+  background: var(--card);
+  border:1px solid var(--border);
+  border-radius: var(--radius);
+  padding:16px;
+}
+.card h2, .card h3{ margin:12px 0 8px; }
+.card p{ color: var(--muted); margin:0 0 12px; }
+
+/* =========================================================
+   BOTONES
+========================================================= */
+.btn{
+  display:inline-block; padding:10px 16px;
+  background: var(--primary); color:#001b0b;
+  border-radius:10px; border:1px solid var(--primary-700);
+  font-weight:700; cursor:pointer; transition: background .2s;
+}
+.btn:hover{ background: var(--primary-700); }
+.btn--sm{ padding:8px 12px; font-weight:600; font-size:14px; }
+.btn--outline{ background: transparent; color: var(--text); border:1px solid var(--border); }
+.btn--outline:hover{ border-color: var(--primary); color: var(--primary); }
+
+/* =========================================================
+   FORMULARIOS
+========================================================= */
+.form{
+  background: var(--card);
+  border:1px solid var(--border);
+  border-radius: var(--radius);
+  padding:20px;
+  max-width:500px;
+}
+.form-group{ margin-bottom:16px; }
+label{ display:block; font-weight:600; margin-bottom:6px; }
+input, select, textarea{
+  width:100%; padding:10px; border-radius:8px;
+  border:1px solid var(--border); background:#0d1427; color: var(--text);
+  font-size:14px;
+}
+input:focus, select:focus, textarea:focus{ outline:none; border-color: var(--primary); }
+textarea{ resize: vertical; min-height: 100px; }
+.form-text{ font-size:12px; color: var(--muted); margin-top:4px; }
+
+/* =========================================================
+   TABLA DEL CARRITO
+========================================================= */
+.cart-table{
+  width:100%; border-collapse: collapse; background: var(--card);
+  border:1px solid var(--border); border-radius: var(--radius); overflow:hidden;
+}
+.cart-table th, .cart-table td{
+  padding:10px; border-bottom:1px solid var(--border); text-align:left;
+}
+.cart-table thead th{ background:#0f1a2e; }
+.cart-table tfoot td{ background:#0f1a2e; }
+.cart-table input[type="number"]{
+  width:70px; padding:6px; background:#0d1427; color: var(--text);
+  border:1px solid var(--border); border-radius:8px;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+.footer{ border-top:1px solid var(--border); background: var(--surface); margin-top:40px; }
+.footer__content{
+  padding:16px 0; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap;
+}
+.footer__links a{ margin-left:12px; color: var(--muted); }
+.footer__links a:hover{ color: var(--text); }
+
+/* =========================================================
+   TOAST (mensaje flotante)
+========================================================= */
+.toast-container{
+  position: fixed; top: 16px; right: 16px;
+  display:flex; flex-direction:column; gap:8px;
+  z-index:9999; pointer-events:none;
+}
+.toast{
+  background:#052e1a; color:#c6f6d5; border:1px solid var(--primary-700);
+  border-radius:10px; padding:10px 14px; font-weight:700;
+  box-shadow:0 6px 24px rgba(0,0,0,.35);
+  transform: translateY(-12px); opacity:0; pointer-events:auto;
+  animation: toast-in .25s ease forwards, toast-out .3s ease forwards 2.3s;
+}
+@keyframes toast-in{ to{ transform: translateY(0); opacity:1; } }
+@keyframes toast-out{ to{ transform: translateY(-12px); opacity:0; } }
+
+/* =========================================================
+   FONDOS DIFUMINADOS (pantalla completa)
+   Uso en HTML: class="bg-cover" + style="--bg-url: url('TU_URL')"
+========================================================= */
+.bg-cover{
+  position: relative;
+  isolation: isolate;     /* stacking context */
+  overflow: hidden;       /* oculta bordes del blur */
+  min-height: 100vh;      /* pantalla completa */
+  display: flex;
+  align-items: center;     /* centra verticalmente */
+}
+.bg-cover::before{
+  content:"";
+  position:absolute; inset:0;
+  background: var(--bg-url) center/cover no-repeat;
+  transform: scale(1.06); /* evita borde duro al hacer blur */
+  filter: blur(8px);
+  z-index:-2;
+}
+.bg-cover::after{
+  content:"";
+  position:absolute; inset:0;
+  background: rgba(15,23,42,.70);  /* oscurecido para legibilidad */
+  z-index:-1;
+}
+.bg-cover > *{ position: relative; z-index: 0; }
+
+/* ===== Métodos de pago: logos y badges ===== */
+.pay-option { display: flex; gap: 10px; align-items: center; }
+.pay-logos { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+.pay-logos img {
+  height: 22px; width: auto; border-radius: 6px; background: #0d1427;
+  padding: 4px 6px; border: 1px solid var(--border);
+}
+.pay-badge {
+  display:inline-block; padding:4px 8px; border-radius:999px;
+  background:#0d1427; border:1px solid var(--border); font-size:12px; color:var(--muted);
+}
+
+/* ===== Detalle de producto ===== */
+.prod-detail{
+  display:grid; gap:24px; align-items:start;
+  grid-template-columns: 1.1fr .9fr;
+}
+@media (max-width: 900px){
+  .prod-detail{ grid-template-columns: 1fr; }
+}
+.prod-info .bullets{ margin:10px 0 16px; padding-left:18px; }
+.prod-info .bullets li{ margin:6px 0; }
+.prod-image img{
+  width:100%; height:auto; border-radius:16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+.price{ margin:14px 0; font-size:18px; }
+.detail-actions{ display:flex; gap:10px; margin-top:12px; }
+
+/* ===== Chips de talla / variantes ===== */
+.size-picker{ display:flex; gap:10px; flex-wrap:wrap; margin:10px 0 4px; }
+.chip{
+  border:1px solid var(--border); background:#0d1427; color: var(--text);
+  padding:8px 14px; border-radius:999px; cursor:pointer; font-weight:700;
+}
+.chip:hover{ border-color: var(--primary); color: var(--primary); }
+.chip.is-active{ background: var(--primary); color:#001b0b; border-color: var(--primary-700); }

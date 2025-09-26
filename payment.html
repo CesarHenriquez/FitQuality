@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Método de pago - FitQuality</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__content">
+      <a class="logo" href="index.html">
+        <img src="assets/img/fitquality.png" alt="FitQuality" />
+      </a>
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="contacto.html">Contacto</a>
+        <a class="btn btn--sm" href="login.html">Ingresar</a>
+        <a href="cart.html">Carrito <span id="cart-count" class="badge">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <section class="grid bg-cover"
+      style="--bg-url: url('https://media.istockphoto.com/id/1391410249/es/foto/deportes-y-actividades-de-gimnasio.jpg?s=612x612&w=0&k=20&c=UVfqkA8dnim6qFRuSjLE6dQHFt7Tjo-AIkvnNVHNJUs=');">
+      <div class="container" style="display:flex; justify-content:center;">
+        <div class="page-narrow">
+          <h1 class="page-title">Método de pago</h1>
+          <p class="muted" style="text-align:center; margin-bottom:16px">
+            Selecciona tu medio de pago preferido.
+          </p>
+
+          <form id="form-pago" class="form">
+            <!-- Webpay / Transbank -->
+            <div class="card" style="margin-bottom:12px">
+              <label class="pay-option" style="cursor:pointer;">
+                <input type="radio" name="mp" value="webpay" checked />
+                <div>
+                  <strong>Tarjetas (Webpay / Transbank)</strong>
+                  <div class="pay-logos">
+                    <span class="pay-badge">Webpay</span>
+                    <span class="pay-badge">Visa</span>
+                    <span class="pay-badge">Mastercard</span>
+                    <span class="pay-badge">Redcompra</span>
+                    <span class="pay-badge">Prepago</span>
+                    <span class="pay-badge">Onepay</span>
+                  </div>
+                  <p class="muted" style="margin:6px 0 0">
+                    Crédito, débito y prepago. Incluye cuotas y billetera Onepay.
+                  </p>
+                </div>
+              </label>
+            </div>
+
+            <!-- Transferencia Bancaria -->
+            <div class="card" style="margin-bottom:12px">
+              <label class="pay-option" style="cursor:pointer;">
+                <input type="radio" name="mp" value="transferencia" />
+                <div>
+                  <strong>Transferencia Bancaria</strong>
+                  <div class="pay-logos">
+                    <span class="pay-badge">Transferencia</span>
+                  </div>
+                  <p class="muted" style="margin:6px 0 0">
+                    Pago seguro por transferencia bancaria desde cualquier banco con conciliación automática.
+                  </p>
+                </div>
+              </label>
+            </div>
+
+            <!-- Wallets -->
+            <div class="card" style="margin-bottom:12px">
+              <label class="pay-option" style="cursor:pointer;">
+                <input type="radio" name="mp" value="wallets" />
+                <div>
+                  <strong>Billeteras digitales</strong>
+                  <div class="pay-logos">
+                    <span class="pay-badge">Mercado Pago</span>
+                    <span class="pay-badge">Fpay</span>
+                    <span class="pay-badge">MACH</span>
+                    <span class="pay-badge">Onepay</span>
+                  </div>
+                  <p class="muted" style="margin:6px 0 0">
+                    Alternativas móviles rápidas y con amplia adopción en Chile.
+                  </p>
+                </div>
+              </label>
+            </div>
+
+            <!-- Resumen -->
+            <div class="card" style="margin-bottom:12px">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <span>Total a pagar</span>
+                <strong id="pay-total">$0</strong>
+              </div>
+            </div>
+
+            <!-- Acciones -->
+            <div style="display:flex; gap:8px; justify-content:flex-end;">
+              <a class="btn btn--outline" href="cart.html">Volver al carrito</a>
+              <button id="btn-pay" type="submit" class="btn">Pagar ahora</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__content">
+      <small>© 2025 FitQuality — Todos los derechos reservados</small>
+      <div class="footer__links">
+        <a href="registro.html">Crear cuenta</a>
+        <a href="login.html">Ingresar</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/validaciones.js"></script>
+</body>
+
+</html>

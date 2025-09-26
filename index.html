@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio - FitQuality</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__content">
+      <a class="logo" href="index.html">
+        <img src="assets/img/fitquality.png" alt="FitQuality" />
+      </a>
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="index.html" aria-current="page">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="contacto.html">Contacto</a>
+        <a class="btn btn--sm" href="login.html">Ingresar</a>
+        <a href="cart.html">Carrito <span id="cart-count" class="badge">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <!-- Hero con fondo difuminado a pantalla completa -->
+    <section class="hero bg-cover"
+      style="--bg-url: url('https://media.istockphoto.com/id/1391410249/es/foto/deportes-y-actividades-de-gimnasio.jpg?s=612x612&w=0&k=20&c=UVfqkA8dnim6qFRuSjLE6dQHFt7Tjo-AIkvnNVHNJUs=');">
+      <div class="container" style="text-align:center">
+        <h1>Implementación deportiva</h1>
+        <p>Magnesio, straps, cinturones de powerlifter, rodilleras, coderas, mancuernas (kg), discos (kg) y más.</p>
+        <a class="btn" href="productos.html">Ver productos</a>
+      </div>
+    </section>
+
+    <!-- Productos Destacados -->
+    <section class="grid">
+      <div class="container">
+        <h2>Productos Destacados</h2>
+        <div class="cards">
+          <!-- Magnesio -->
+          <article class="card">
+            <img
+              src="https://biogymstore.cl/cdn/shop/products/MAGNESIODEPORTIVOCROSSFTICALISTENIAPORMAYORBIOGYMSTORECHILE_2048x.jpg?v=1679183264"
+              alt="Magnesio deportivo" />
+            <h3>Magnesio $2500</h3>
+            <p>Mejora tu agarre en levantamientos y entrenamientos intensos.</p>
+            <div style="display:flex; gap:8px; flex-wrap:wrap">
+              <button class="btn btn--outline" data-add data-id="magnesio" data-name="Magnesio"
+                data-price="2500">Añadir</button>
+              <a class="btn" href="detalle.html?id=magnesio">Ver detalle</a>
+            </div>
+          </article>
+
+          <!-- Straps -->
+          <article class="card">
+            <img
+              src="https://olimposports.cl/wp-content/uploads/2023/10/Copia-de-NUEVO-FORMATO-2025-01-16T110258.906.jpg"
+              alt="Straps de entrenamiento" />
+            <h3>Straps $3500</h3>
+            <p>Soporte extra para ejercicios de tirón y peso muerto.</p>
+            <div style="display:flex; gap:8px; flex-wrap:wrap">
+              <button class="btn btn--outline" data-add data-id="straps" data-name="Straps"
+                data-price="3500">Añadir</button>
+              <a class="btn" href="detalle.html?id=straps">Ver detalle</a>
+            </div>
+          </article>
+
+          <!-- Cinturón Powerlifter -->
+          <article class="card">
+            <img src="https://greatlhete.cl/wp-content/uploads/2022/10/powerliftingpalancaback.webp"
+              alt="Cinturón de powerlifter" />
+            <h3>Cinturón Powerlifter $14990</h3>
+            <p>Aumenta tu estabilidad en sentadillas y press militar.</p>
+            <div style="display:flex; gap:8px; flex-wrap:wrap">
+              <button class="btn btn--outline" data-add data-id="cinturon" data-name="Cinturón Powerlifter"
+                data-price="14990">Añadir</button>
+              <a class="btn" href="detalle.html?id=cinturon">Ver detalle</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__content">
+      <small>© 2025 FitQuality — Todos los derechos reservados</small>
+      <div class="footer__links">
+        <a href="registro.html">Crear cuenta</a>
+        <a href="login.html">Ingresar</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/validaciones.js"></script>
+</body>
+
+</html>

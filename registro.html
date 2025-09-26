@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registro - FitQuality</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__content">
+      <a class="logo" href="index.html">
+        <img src="assets/img/fitquality.png" alt="FitQuality" />
+      </a>
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="contacto.html">Contacto</a>
+        <a class="btn btn--sm" href="login.html">Ingresar</a>
+        <a href="cart.html">Carrito <span id="cart-count" class="badge">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="grid page-wrap bg-cover"
+      style="--bg-url: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhEhePUKdqcKGn5WFGhodLS266QttCEZoI6mDINQdh6nbi07YiI9BRI4r6HoTfVPnA1lO_j-F1iarjVCSQxXLZsqhozeIsmjcGizieliDnHZ-VSJYEUVDlgBeaaw-36gvIiny5R4W8jX6xvkJrRaAlWtUzdtFcuSMmc8m9L6jfg1kXRb-9QXNNohPSuoZA/s1600/0.webp');">
+      <div class="container page-narrow">
+        <h1 class="page-title">Crear cuenta</h1>
+        <p class="muted" style="text-align:center;margin-bottom:16px">
+          Completa tus datos para una experiencia más rápida.
+        </p>
+
+        <form id="form-registro" class="form" novalidate>
+          <!-- RUN / RUT -->
+          <div class="form-group">
+            <label for="reg-run">RUN/RUT</label>
+            <input type="text" id="reg-run" name="run"
+              maxlength="12" required placeholder="12.345.678-K" />
+            <small class="form-text">Puedes escribirlo con o sin puntos y guion. DV puede ser número o K.</small>
+          </div>
+
+          <div class="form-group">
+            <label for="reg-nombre">Nombre</label>
+            <input type="text" id="reg-nombre" name="nombre" maxlength="50" required placeholder="Tu nombre" />
+          </div>
+
+          <div class="form-group">
+            <label for="reg-apellidos">Apellidos</label>
+            <input type="text" id="reg-apellidos" name="apellidos" maxlength="100" required placeholder="Tus apellidos" />
+          </div>
+
+          <div class="form-group">
+            <label for="reg-correo">Correo electrónico</label>
+            <input type="email" id="reg-correo" name="correo" maxlength="100" required
+              placeholder="ejemplo@gmail.com" pattern="^[a-zA-Z0-9._%+-]+@gmail\\.com$" />
+            <small class="form-text">Solo se permite el dominio <strong>@gmail.com</strong></small>
+          </div>
+
+          <div class="form-group">
+            <label for="reg-fecha">Fecha de nacimiento (opcional)</label>
+            <input type="date" id="reg-fecha" name="fechaNac" />
+          </div>
+
+          <!-- Región / Comuna -->
+          <div class="form-group">
+            <label for="reg-region">Región</label>
+            <select id="reg-region" name="region" required>
+              <option value="">Selecciona región</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="reg-comuna">Comuna</label>
+            <select id="reg-comuna" name="comuna" required>
+              <option value="">Selecciona comuna</option>
+            </select>
+            <small class="form-text">Las comunas se cargan según la región.</small>
+          </div>
+
+          <div class="form-group">
+            <label for="reg-direccion">Dirección</label>
+            <input type="text" id="reg-direccion" name="direccion" maxlength="300" required placeholder="Calle y número" />
+          </div>
+
+          <!-- NUEVO: Contraseña (para admin o cliente) -->
+          <div class="form-group">
+            <label for="reg-pass">Contraseña</label>
+            <input type="password" id="reg-pass" name="password" minlength="4" maxlength="10" required placeholder="4 a 10 caracteres" />
+            <small class="form-text">Si ingresas "admin" serás redirigido al panel de administrador.</small>
+          </div>
+
+          <input type="hidden" name="tipoUsuario" value="Cliente" />
+
+          <button type="submit" class="btn" style="width:100%">Registrarme</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__content">
+      <small>© 2025 FitQuality — Todos los derechos reservados</small>
+      <div class="footer__links">
+        <a href="login.html">Ingresar</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Solo enlaces a JS, nada embebido -->
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/validaciones.js"></script>
+</body>
+</html> 

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin - FitQuality</title>
+  <link rel="stylesheet" href="assets/css/styles.css"/>
+</head>
+<body>
+  <header class="header">
+    <div class="container header__content">
+      <a class="logo" href="index.html">
+        <img src="assets/img/fitquality.png" alt="FitQuality"/>
+      </a>
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="cart.html">Carrito <span id="cart-count" class="badge">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="grid bg-cover"
+      style="--bg-url: url('https://media.istockphoto.com/id/1391410249/es/foto/deportes-y-actividades-de-gimnasio.jpg?s=612x612&w=0&k=20&c=UVfqkA8dnim6qFRuSjLE6dQHFt7Tjo-AIkvnNVHNJUs=');">
+      <div class="container page-narrow" id="admin-app">
+        <div style="display:flex;justify-content:flex-end;margin-bottom:14px">
+          <button id="admin-logout" class="btn btn--outline">Cerrar sesión (demo)</button>
+        </div>
+
+        <h1 class="page-title" style="text-align:center">Panel de Administración (Demo)</h1>
+        <p class="muted" style="text-align:center;margin:0 0 16px">
+          Los cambios se guardan en <strong>localStorage</strong> y se reflejan en el catálogo.
+        </p>
+
+        <!-- Formulario agregar producto -->
+        <div class="card" style="padding:18px">
+          <h2 style="margin-top:0">Agregar producto al catálogo (demo)</h2>
+
+          <!-- IMPORTANT: ids y names que requiere app.js -->
+          <form id="admin-add-product" class="form" autocomplete="off">
+            <div class="form-group">
+              <label for="admin-id">ID del producto</label>
+              <input id="admin-id" name="id" type="text" placeholder="ej: cuerda-saltar" required maxlength="40"/>
+              <small class="form-text">ID corto, sin espacios (usa guiones si es necesario).</small>
+            </div>
+
+            <div class="form-group">
+              <label for="admin-name">Nombre</label>
+              <input id="admin-name" name="nombre" type="text" placeholder="Nombre del producto" required maxlength="60"/>
+            </div>
+
+            <div class="form-group">
+              <label for="admin-price">Precio</label>
+              <input id="admin-price" name="precio" type="number" min="0" step="1" placeholder="Ej: 9990" required/>
+            </div>
+
+            <div class="form-group">
+              <label for="admin-img">URL de imagen (opcional)</label>
+              <input id="admin-img" name="img" type="url" placeholder="https://..."/>
+            </div>
+
+            <div style="display:flex;gap:8px;justify-content:flex-end">
+              <button type="submit" class="btn" id="admin-save">Agregar producto</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Lista de productos agregados por admin -->
+        <div class="card" style="padding:18px;margin-top:16px">
+          <h2 style="margin-top:0">Productos agregados por Admin</h2>
+          <!-- app.js renderiza una tabla aquí -->
+          <div id="admin-products"></div>
+        </div>
+
+        <!-- Usuarios registrados -->
+        <div class="card" style="padding:18px;margin-top:16px">
+          <h2 style="margin-top:0">Usuarios registrados</h2>
+          <!-- app.js renderiza una tabla aquí -->
+          <div id="admin-users"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__content">
+      <small>© 2025 FitQuality — Todos los derechos reservados</small>
+      <div class="footer__links">
+        <a href="index.html">Inicio</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

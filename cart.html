@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carrito - FitQuality</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__content">
+      <a class="logo" href="index.html">
+        <img src="assets/img/fitquality.png" alt="FitQuality" />
+      </a>
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="contacto.html">Contacto</a>
+        <a class="btn btn--sm" href="login.html">Ingresar</a>
+        <a href="cart.html">Carrito <span id="cart-count" class="badge">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <section class="grid">
+      <div class="container">
+        <h1 class="page-title">Tu carrito</h1>
+        <!-- El JS de app.js pintará aquí la tabla -->
+        <div id="cart"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__content">
+      <small>© 2025 FitQuality — Todos los derechos reservados</small>
+      <div class="footer__links">
+        <a href="registro.html">Crear cuenta</a>
+        <a href="login.html">Ingresar</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Solo referencias a JS -->
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/validaciones.js"></script>
+</body>
+</html>

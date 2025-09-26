@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto - FitQuality</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header__content">
+      <a class="logo" href="index.html">
+        <img src="assets/img/fitquality.png" alt="FitQuality" />
+      </a>
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="contacto.html" aria-current="page">Contacto</a>
+        <a class="btn btn--sm" href="login.html">Ingresar</a>
+        <a href="cart.html">Carrito <span id="cart-count" class="badge">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="grid page-wrap">
+      <div class="container page-narrow">
+        <h1 class="page-title">Contacto</h1>
+        <p class="muted" style="text-align:center;margin-bottom:16px">
+          ¿Dudas sobre magnesio, straps o barras? Escríbenos y te ayudamos.
+        </p>
+
+        <form id="form-contacto" class="form">
+          <div class="form-group">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" maxlength="100" required placeholder="Tu nombre" />
+          </div>
+
+          <div class="form-group">
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo" maxlength="100" required placeholder="ejemplo@gmail.com" />
+            <small class="form-text">Permitidos:@gmail.com</small>
+          </div>
+
+          <div class="form-group">
+            <label for="comentario">Comentario</label>
+            <textarea id="comentario" name="comentario" maxlength="500" required
+              placeholder="Escribe tu mensaje (máx 500 caracteres)"></textarea>
+          </div>
+
+          <button type="submit" class="btn" style="width:100%">Enviar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__content">
+      <small>© 2025 FitQuality — Todos los derechos reservados</small>
+      <div class="footer__links">
+        <a href="registro.html">Crear cuenta</a>
+        <a href="login.html">Ingresar</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/validaciones.js"></script>
+</body>
+
+</html>
